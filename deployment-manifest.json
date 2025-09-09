@@ -1,0 +1,63 @@
+{
+  "version": "1.0",
+  "projectId": "test-break-check",
+  "projectType": "nextjs",
+  "framework": "nextjs",
+  "packageManager": "npm",
+  "processes": [
+    {
+      "processType": "web",
+      "command": "npm run start",
+      "description": "Main application process"
+    },
+    {
+      "processType": "build",
+      "command": "npm run build",
+      "description": "Build process"
+    }
+  ],
+  "environment": {
+    "NEXT_PUBLIC_API_URL": "https://api.example.com",
+    "DATABASE_URL": "your_database_url",
+    "NODE_ENV": "production",
+    "PROJECT_ID": "test-break-check"
+  },
+  "deployment": {
+    "strategy": "vercel",
+    "buildCommand": "npm run build",
+    "startCommand": "npm run start",
+    "installCommand": "npm install",
+    "healthCheck": {
+      "endpoint": "/health",
+      "command": "curl localhost:3000/health",
+      "timeout": 30000
+    }
+  },
+  "docker": {
+    "dockerfile": "Dockerfile",
+    "baseImage": "node:16-alpine",
+    "ports": [
+      3000
+    ]
+  },
+  "vercel": {
+    "framework": "nextjs",
+    "buildCommand": "npm run build",
+    "outputDirectory": ".next",
+    "installCommand": "npm install"
+  },
+  "custom": {
+    "commands": [
+      "npm run lint"
+    ],
+    "environment": {
+      "NODE_ENV": "production"
+    }
+  },
+  "metadata": {
+    "createdAt": "2025-09-09T05:17:30.819Z",
+    "updatedAt": "2025-09-09T05:17:30.819Z",
+    "generatedBy": "zara-llm",
+    "version": "1.0.0"
+  }
+}
