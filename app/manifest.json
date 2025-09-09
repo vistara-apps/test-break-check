@@ -1,0 +1,14 @@
+{
+  "frame": {
+    "version": "1",
+    "name": "Base Mini App Test",
+    "homeUrl": "https://your-domain.com",
+    "iconUrl": "https://your-domain.com/icon.png",
+    "splashImageUrl": "https://your-domain.com/splash.png",
+    "splashBackgroundColor": "#ffffff",
+    "subtitle": "Testing MiniKit Integration",
+    "description": "A test application for Base Mini Apps with MiniKit and OnchainKit integration.",
+    "primaryCategory": "utility",
+    "tags": ["test", "minikit", "base", "onchainkit"]
+  }
+}
